@@ -21,13 +21,7 @@ public class ProductsController {
 
     @GetMapping("/getProduct/{idProduct}")
     public Optional<Products> getProductById(@PathVariable Long idProduct) {
-        try {
             return productsService.getProduct(idProduct);
-        } catch (Exception e) {
-            System.out.println("Error" + e);
-            return null;
-        }
-
     }
 
     @PostMapping("/addProduct")
